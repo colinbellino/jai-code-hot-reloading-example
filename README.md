@@ -12,6 +12,7 @@ You can run everything in this order if you just want to build and open: `jai bu
 
 ## Taking this further
 I tried to keep this example simple, but a lot more can be done with this, here are some ideas:
+- Detect if the app memory layout/size changed between reloads, because right now this would break in unintended ways since we don't assert that in this example. Ideally, you'll want to close and reopen the app in that case, or display an error in that case.
 - Run the `build_app.jai` from within the app itself (ie: "Recompile app" button or shortcut)
 - Merge the build files into one and use build parameters to choose between build main/app/both or even open the app in a debugger.
 - Build the main program only the first time you compile the app, after that only build the `app.jai`.
