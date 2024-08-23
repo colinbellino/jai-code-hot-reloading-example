@@ -32,7 +32,7 @@ unload :: (ptr: *void, verbose := false) -> (ok: bool) {
         if result == 0 && verbose {
             log_error("Couldn't unload library.\n%.", GetLastError());
         }
-        return cast(bool) result != 0;
+        return cast(bool) result;
     } else {
         #import "Basic";
         #import "POSIX";
