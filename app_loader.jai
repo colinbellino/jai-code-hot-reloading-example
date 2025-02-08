@@ -9,7 +9,7 @@ library :: #import,file "library.jai";
 } else #if OS == .MACOS {
     LIBRARY_FILENAME :: "app.dylib";
 } else {
-    LIBRARY_FILENAME :: "app.lib";
+    LIBRARY_FILENAME :: "app.so";
 }
 
 App :: struct {
